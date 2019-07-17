@@ -57,9 +57,9 @@ app.get('/login',(req,res)=>{
     //res.send('connected')
 });
 
-//load forget password page
-app.get('/forgot_pass',(req,res)=>{
-    res.render('forgot_pass')
+//load admin page
+app.get('/admin',(req,res)=>{
+    res.render('addplayer')
     //res.send('connected')
 });
 
