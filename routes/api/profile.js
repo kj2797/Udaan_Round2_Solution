@@ -28,6 +28,24 @@ router.get('/find/everyone',(req,res)=>{
         .catch(err=>console.log('Error in fetching user name'+err))
 })
 
+// @type     GET
+// @route    /api/profile/find/leaderboard
+// @desc     route for getting all participant
+// @access   PUBLIC
+
+router.get('/find/leaderboard',(req,res)=>{
+    Person.find()
+    .populate('user',['name','playerScore'])
+        .then(person=>{
+            if(!person){
+                res.status(404).json({ranknotfound:'No players found'})
+            }
+            res.json(person)
+        })
+        .catch(err=>console.log('Error in fetching leaderboard'+err))
+})
+
+
 
 
 // @type     POST
@@ -52,17 +70,6 @@ router.post('/maketeam',(req,res)=>{
         })
         .catch(err=>console.log(err))
 })
-
-
-
-
-
-
-
-
-
-
-
 
 
 
