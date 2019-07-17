@@ -52,8 +52,8 @@ app.get('/register',(req,res)=>{
 
 
 //load login page
-app.get('/login',(req,res)=>{
-    res.render('login')
+app.get('/maketeam',(req,res)=>{
+    res.render('maketeam')
     //res.send('connected')
 });
 
@@ -63,8 +63,8 @@ app.get('/admin',(req,res)=>{
     //res.send('connected')
 });
 
-app.post('/reset_pass',(req,res)=>{
-    res.render('reset_pass')
+app.get('/addplayer',(req,res)=>{
+    res.render('addplayer')
     //res.send('connected')
 });
 

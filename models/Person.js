@@ -22,7 +22,9 @@ const PersonSchema=new Schema({
         type: String
     },
     isAdmin: {
-        type: String
+        type: String,
+        default:'0'
+
     }
 })
 

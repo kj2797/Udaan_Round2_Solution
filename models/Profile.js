@@ -9,14 +9,19 @@ const ProfileSchema=new Schema({
     },
     playerValue:{
         type:String,
-        required:true
+        default:"0"
     },
     playerScore:{
-        type:String
+        type:String,
+        default:"0"
     },
     playerTeam:{
         type:String,
         required:true
+    },
+    playerType:{
+        type:String,
+        default:"B"
     },
     date:{
         type:Date,
